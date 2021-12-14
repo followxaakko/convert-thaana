@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="dv">
+<head>
+    <script src="src/ThaanaKeyboard.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: Waheed;
+            src: url(src/font/MVWaheed.otf);
+        }
+        @font-face {
+            font-family: Faseyha;
+            src: url(src/font/MV_Faseyha.otf);
+        }
+        body {
+            font-family: Waheed;
+        }
+        #box {
+            background-color: #ff1212;
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 15px;
+            border-radius: 15px;
+            width: 620px;
+            height: "auto"px;
+            box-shadow: 0 5px 15px 0 rgba(255, 255, 255, 0.2), 0 2px 15px 0 rgba(0, 0, 0, 0.30);
+            border-style: solid;
+            border-width: 5px;
+            border-color: rgb(255, 255, 255);
+        }
+        h3 {
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            font-weight: 100;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 8px 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #9c1010;
+            border-radius: 15px;
+            box-sizing: border-box;
+            font-family: Waheed;
+            font-weight: 300px;
+            font-size: 18px;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #ff6363;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: Faseyha;
+            font-size: 20px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #db0000;
+        }
+
+        div {
+            border-radius: 15px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        label {
+            font-size: 30px;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<script>
+    window.addEventListener('DOMContentLoaded' , (e) => {
+        new ThaanaKeyboard();
+    });
+</script>
+<center>
+    <div id="box">
+        <h3> ދިވެހި ތާނައަށް ބަދަލު ކުރޭ </h3>
+            <div>
+                <form action="transliterate.php" method="get">
+                    <label for="dhivehi">ބަދަލު ކުރަން ބޭނުންވާ ޓެކްސްޓް ލިޔޭ</label>
+                    <input type="text" class="thaana-keyboard" id="dhivehi" name="dhivehi" placeholder="ކޮވިޑް، ސަލާމް، ދޮންކެޔޮ...">
+                    <input type="submit" value="ކޮންވާރޓް ކުރޭ">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
